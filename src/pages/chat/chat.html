@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Chat
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  {{ username }} is entered!
+  <ion-list>
+    <ion-item *ngFor="let message of messages"> {{message}}</ion-item>
+  </ion-list>
+
+
+</ion-content>
+
+<ion-footer>
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="chatBox" placeholder="Type your message"></ion-input>
+    <button  ion-button round item-right (click)="sendMessage(chatBox)">Send</button>
+  </ion-item>
+
+</ion-footer>

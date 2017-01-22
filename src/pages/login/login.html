@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Simple Chat
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div style="max-width:500px; margin:0 auto;" >
+    <ion-list>
+
+      <ion-item>
+        <ion-input type="text" placeholder="Username" [(ngModel)]="username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <button ion-button (click)="join()" clear item-right style="float: right;">Join</button>
+    <button ion-button (click)="login()" round  style="float: right;">   Login   </button>
+  </div>
+</ion-content>
